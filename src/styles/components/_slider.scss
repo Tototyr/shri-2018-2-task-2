@@ -38,46 +38,8 @@ $temperature-track-bcg: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 
 }
 
 @media (max-width: 500px) {
-
-
     .range-slider {
-        //    width: 60px;
-        //    height: 100%;
-        //
-        //    // Как вариант
-        transform: rotateZ(270deg);
+        flex: 1;
+        transform: rotateZ(90deg);
     }
-    //
-    //    &:before {
-    //        content: "+30";
-    //
-    //        font-family: ArialMT, sans-serif;
-    //        font-size: 18px;
-    //        font-weight: bold;
-    //
-    //        position: absolute;
-    //        left: 50%;
-    //        top: 16px;
-    //
-    //        transform: translateX(-50%);
-    //        color: map_get($colors, light-color);
-    //    }
-    //
-    //    &:after {
-    //        content: "-10";
-    //
-    //        font-family: ArialMT, sans-serif;
-    //        font-size: 18px;
-    //        font-weight: bold;
-    //
-    //        position: absolute;
-    //        left: 50%;
-    //        bottom: 16px;
-    //        top: auto;
-    //        right: auto;
-    //
-    //        transform: translateX(-50%);
-    //        color: map_get($colors, light-color);
-    //    }
-    //}
 }

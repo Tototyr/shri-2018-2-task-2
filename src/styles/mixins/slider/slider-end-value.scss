@@ -15,9 +15,19 @@
 		
 		@if $backgroundName != '' {
 			@include background-image($backgroundName);
+
+			width: 20px;
+			height: 20px;
+			background-size: 20px;
 		}
 		
 		transform: translateY(-50%);
 		color: map_get($colors, light-color);
+	}
+
+	@media (max-width: 500px) {
+		&:after {
+			transform: translateY(-50%) rotate(-90deg);
+		}
 	}
 }

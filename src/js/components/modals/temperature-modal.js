@@ -19,7 +19,6 @@ export default class TemperatureModal extends Modal {
 								<p class="modal__title">${ deviceName }</p>
 								<p class="modal__degrees">
 									<span class="modal__degrees-count">+23</span>
-									<!--<img src=<%=require("./assets/images/icon_temperature@1x.png")%>-->
 								</p>
 							</div>
 							<p class="modal__device-state">${ deviceState }</p>

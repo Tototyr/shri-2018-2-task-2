@@ -150,18 +150,14 @@
             
             flex: 1;
         }
-        
+
         &__content {
             display: flex;
             flex-flow: column nowrap;
     
             height: 100%;
         }
-        
-        &__range {
-            //margin: 0 auto;
-        }
-        
+
         &__action {
             margin-right: 0;
             margin-bottom: 15px;

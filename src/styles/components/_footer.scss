@@ -48,3 +48,32 @@ body {
         margin-left: auto;
     }
 }
+
+@media (max-width: 500px) {
+    .footer {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+
+        padding: 25px;
+
+        &__navigation {
+            flex-flow: column nowrap;
+        }
+
+        &__navigation-list {
+            flex-flow: column nowrap;
+            margin-bottom: 10px;
+        }
+
+        &__navigation-item {
+            width: 100%;
+
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+
+        &__copyright {
+            margin: 0;
+        }
+    }
+}
