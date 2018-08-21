@@ -1,0 +1,24 @@
+@import "../theme/colors";
+@import "../mixins/background-image";
+
+.btn {
+	border: none;
+	
+	&--more {
+		padding: 12px;
+		
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		
+		background-color: map_get($colors, dim-color);
+		@include background-image('arrow-double');
+	}
+	
+	&--company {
+		background: map_get($colors, company-color);
+	}
+	
+	&--default {
+		background: map_get($colors, light-color);
+	}
+}

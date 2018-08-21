@@ -1,0 +1,30 @@
+@import "../theme/colors";
+
+.title-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 13px;
+
+        // TODO: попробовать проверить наличие сосдених элементов
+        white-space: nowrap;
+    }
+
+    &__slider-arrows {
+        margin-left: auto;
+    }
+
+    &__filters {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}

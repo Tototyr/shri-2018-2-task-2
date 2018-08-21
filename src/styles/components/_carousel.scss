@@ -1,0 +1,88 @@
+// Mixins
+@import "../mixins/background-image";
+@import "../mixins/scroll-hide";
+
+.slider-arrows {
+
+    &__action {
+        margin-right: 15px;
+
+        height: 14px;
+        width: 8px;
+
+        border: none;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: ' ';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+
+            width: 100%;
+            height: 100%;
+
+            @include background-image('arrow-left');
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &--left {
+            transform: rotate(360deg);
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &__item {
+        margin-right: 20px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__slides {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        will-change: transform;
+        transition: transform .3s;
+
+        @include scroll-hide();
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel {
+        overflow: auto;
+
+        &__slides {
+            @include scroll-hide();
+        }
+    }
+
+    .slider-arrows {
+        display: none;
+    }
+}

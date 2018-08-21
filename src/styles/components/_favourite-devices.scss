@@ -1,0 +1,19 @@
+@import "../theme/colors";
+
+// Mixins
+@import "../mixins/scroll-hide";
+
+.favourite-devices {
+    display: flex;
+    flex-flow: row nowrap;
+
+    @include scroll-hide();
+
+    &__item {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

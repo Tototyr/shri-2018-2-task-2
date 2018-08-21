@@ -1,0 +1,11 @@
+@mixin scroll-hide() {
+    overflow: auto;
+    max-height: 100%;
+    
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+// Pages
+@import "./pages/index";
+
+// Components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/device";
+@import "./components/task";
+@import "./components/dashboard";
+@import "./components/favourite-tasks";
+@import "./components/favourite-devices";
+@import "./components/filters";
+@import "./components/title-container";
+@import "./components/weather";
+@import "./components/slider";
+@import "./components/dropdown";
+@import "./components/modal";
+@import "./components/carousel";
+
+// Utils
+@import "utils/utils";
+@import "./utils/buttons";

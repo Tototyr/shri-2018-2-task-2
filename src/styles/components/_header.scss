@@ -1,0 +1,119 @@
+@import "../theme/colors";
+
+// Mixins
+@import "../mixins/background-image";
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 33px 40px;
+    border-bottom: 1px solid map_get($colors, dim-color);
+
+    &__logo-container {
+        width: 108px;
+        height: 27px;
+
+        margin-right: 52px;
+    }
+
+    &__mobile-toggle {
+        display: none;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__navigation {
+        width: auto;
+    }
+
+    &__navigation-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__navigation-item {
+        margin-right: 28px;
+
+        color: map_get($colors, main-text-color);
+        transition: opacity .3s;
+        opacity: .6;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        font-weight: bold;
+        font-size: 16px;
+
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 25px;
+        position: relative;
+
+        &__mobile-toggle {
+            display: block;
+
+            height: 16px;
+            width: 16px;
+
+            margin-left: auto;
+            border: none;
+
+            @include background-image('icon_list_m');
+        }
+
+        &__navigation {
+            width: auto;
+            height: auto;
+
+            padding: 25px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            z-index: 99;
+
+            background: map_get($colors, light-color);
+
+            &--disable {
+                display: none;
+            }
+        }
+
+        &__navigation-list {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        &__navigation-item {
+            margin-right: 0;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

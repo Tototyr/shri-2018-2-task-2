@@ -1,0 +1,67 @@
+@import "../theme/colors";
+
+.smart-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 26px;
+    grid-template-areas:
+            "main tasks"
+            "main tasks"
+            "devices devices";
+    padding: 29px 40px;
+
+    flex: 1 0 auto;
+
+    &__dashboard {
+        grid-area: main;
+    }
+
+    &__favourite-tasks {
+        grid-area: tasks;
+        overflow: hidden;
+    }
+
+    &__favourite-devices {
+        grid-area: devices;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 500px) {
+     .smart-home {
+         grid-template-columns: 1fr;
+         grid-template-areas:
+                 "main"
+                 "tasks"
+                 "devices";
+         grid-gap: 31px;
+
+         padding: 15px 20px;
+         overflow: auto;
+
+         &--shadow {
+
+             &:after {
+                 content: "";
+
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 top: 50px;
+                 bottom: 0;
+
+                 display: block;
+                 background: rgba(51, 51, 51, 0.5);
+             }
+         }
+
+         &__dashboard, &__favourite-tasks, &__favourite-devices {
+            overflow: auto;
+         }
+
+         &__favourite-devices {
+             overflow-x: scroll;
+         }
+     }
+}

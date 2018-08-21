@@ -1,0 +1,26 @@
+@import "../background-image";
+
+@mixin slider-start-value($content: '', $backgroundName: '') {
+	
+	&:before {
+		content: $content;
+		
+		font-family: ArialMT, sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		
+		@if $backgroundName != '' {
+			height: 20px;
+			width: 20px;
+			
+			@include background-image($backgroundName);
+		}
+		
+		transform: translateY(-50%);
+		color: map_get($colors, light-color);
+	}
+}

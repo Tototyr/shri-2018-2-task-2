@@ -1,0 +1,29 @@
+@import "../theme/colors";
+
+.dropdown {
+
+    &__toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .dropdown {
+        position: relative;
+
+        &__toggle {
+            background: map_get($colors, company);
+        }
+
+        &__content {
+            display: none;
+
+            &--active {
+                display: flex;
+                flex-flow: column nowrap;
+                position: absolute;
+                top: 20px;
+            }
+        }
+    }
+}

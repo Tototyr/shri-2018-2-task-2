@@ -1,0 +1,60 @@
+@import "../theme/colors";
+
+.weather-list {
+    display: flex;
+
+    &__item {
+        margin-right: 18px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__label {
+        font-size: 14px;
+
+        margin-bottom: 4px;
+        color: map_get($colors, second-text-color);
+    }
+
+    &__degrees-container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    &__degrees {
+        font-size: 36px;
+        font-weight: bold;
+
+        margin: 0;
+        color: map_get($colors, main-text-color);
+    }
+
+    &__icon {
+        width: 26px;
+        height: 26px;
+
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .weather-list {
+        margin-bottom: 20px;
+
+        &__label {
+            font-size: 12px;
+        }
+
+        &__degrees {
+            font-size: 24px;
+        }
+
+        &__icon {
+            width: 17px;
+            height: 17px;
+        }
+    }
+}

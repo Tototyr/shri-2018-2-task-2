@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header__logo-container">
+            <img src='<%=require("./assets/images/yandex-home@1x.png")%>'
+                 srcset='<%=require("./assets/images/yandex-home@2x.png")%>' alt="Яндекс Дом логотип" class="header__logo">
+        </div>
+        <button class="header__mobile-toggle"></button>
+        <nav class="header__navigation header__navigation--disable" role="navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item header__navigation-item--active">
+                    <a href="#" class="header__link">Сводка</a>
+                </li>
+                <li class="header__navigation-item">
+                    <a href="#" class="header__link">Устройства</a>
+                </li>
+                <li class="header__navigation-item">
+                    <a href="#" class="header__link">Сценарии</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="smart-home">
+        <section class="smart-home__dashboard">
+            <div class="title-container">
+                <h2 class="title-container__title">Главное</h2>
+            </div>
+            <div class="dashboard">
+                <div class="dashboard__events">
+                    <p class="dashboard__user-welcome">Привет, Геннадий!</p>
+                    <p class="dashboard__home-state">Двери и окна закрыты, сигнализация включена.</p>
+
+                    <ul class="weather-list">
+                        <li class="weather-list__item">
+                            <span class="weather-list__label">Дома</span>
+                            <div class="weather-list__degrees-container">
+                                <p class="weather-list__degrees">+23</p>
+                            </div>
+                        </li>
+                        <li class="weather-list__item">
+                            <span class="weather-list__label">За окном</span>
+                            <div class="weather-list__degrees-container">
+                                <p class="weather-list__degrees">+19</p>
+                                <img src='<%=require("./assets/images/cloud-drizzle@1x.png")%>' class="weather-list__icon">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dashboard__devices">
+                    <ul class="dashboard__devices-list">
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="light">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="light">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="light">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="temperature">
+                            <img class="device__icon device__icon--disable"
+                                 src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                 srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                            <div class="device__desc">
+                                <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                <p class="device__state">Включится в <time>17:00</time></p>
+                            </div>
+                        </li>
+                        <li class="dashboard__device-item device" data-type="light">
+                        <img class="device__icon device__icon--disable"
+                             src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                             srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                        <div class="device__desc">
+                            <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                            <p class="device__state">Включится в <time>17:00</time></p>
+                        </div>
+                        </li>
+                    </ul>
+                    <button class="dashboard__show-more btn btn--more"></button>
+                </div>
+            </div>
+        </section>
+        <section class="smart-home__favourite-tasks">
+            <div class="title-container">
+                <h2 class="title-container__title">Израбнные сценарии</h2>
+                <div class="title-container__slider-arrows slider-arrows slider-arrows--tasks">
+                    <button class="slider-arrows__action slider-arrows__action--left"></button>
+                    <button class="slider-arrows__action slider-arrows__action--right"></button>
+                </div>
+            </div>
+
+            <div class="carousel carousel--tasks">
+                <ul class="carousel__slides">
+                    <li class="carousel__wrapper">
+                        <ul class="favourite-tasks carousel__item">
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="carousel__wrapper">
+                        <ul class="favourite-tasks carousel__item">
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="carousel__wrapper">
+                        <ul class="favourite-tasks carousel__item">
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                            <li class="favourite-tasks__item favourite-tasks__task task carousel__slide">
+                                <img src="./images/icon_sun_2@1x.png"
+                                     srcset="./images/icon_sun_2@2x.png" alt="" class="task__icon">
+                                <p class="task__name">Выключить весь свет в доме и во дворе</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="smart-home__favourite-devices">
+            <div class="title-container">
+                <h2 class="title-container__title">Избранные устройства</h2>
+                <div class="title-container__filters">
+
+                    <div class="dropdown">
+                        <button class="btn btn--company dropdown__toggle">Все</button>
+                        <ul class="filters-list dropdown__content">
+                            <li class="filters-list__item filters-list__item--active">
+                                <button class="filters-list__filter" data-rel="all" data-filter-cont="favourite-devices">Все</button>
+                            </li>
+                            <li class="filters-list__item">
+                                <button class="filters-list__filter" data-rel="kitchen" data-filter-cont="favourite-devices">Кухня</button>
+                            </li>
+                            <li class="filters-list__item">
+                                <button class="filters-list__filter" data-rel="hall" data-filter-cont="favourite-devices">Зал</button>
+                            </li>
+                            <li class="filters-list__item">
+                                <button class="filters-list__filter" data-rel="bulbs" data-filter-cont="favourite-devices">Лампочки</button>
+                            </li>
+                            <li class="filters-list__item">
+                                <button class="filters-list__filter" data-rel="cameras" data-filter-cont="favourite-devices">Камеры</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="title-container__slider-arrows slider-arrows--devices">
+                    <button class="slider-arrows__action slider-arrows__action--left"></button>
+                    <button class="slider-arrows__action slider-arrows__action--right"></button>
+                </div>
+            </div>
+            <div class="carousel carousel--devices">
+                <ul class="carousel__slides filter-area">
+                    <li class="carousel__wrapper">
+                        <ul class="favourite-devices carousel__item">
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all hall" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all bulbs" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all kitchen" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all bulbs" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all kitchen" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all bulbs" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all bulbs" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all light" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all kitchen" data-type="temperature">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all light" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all cameras" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                            <li class="carousel__slide favourite-devices__item device" data-filter="all bulbs" data-type="light">
+                                <img class="device__icon device__icon--disable"
+                                     src='<%=require("./assets/images/icon_temperature_2@1x.png")%>'
+                                     srcset='<%=require("./assets/images/icon_temperature_2@2x.png")%>'>
+                                <div class="device__desc">
+                                    <p class="device__name">Xiaomi Yeelight LED Smart Bulb</p>
+                                    <p class="device__state">Включится в <time>17:00</time></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__navigation">
+            <ul class="footer__navigation-list">
+                <li class="footer__navigation-item">
+                    <a href="#" class="footer__navigation-link">Помощь</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#" class="footer__navigation-link">Обратная связь</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#" class="footer__navigation-link">Разработчикам</a>
+                </li>
+                <li class="footer__navigation-item">
+                    <a href="#" class="footer__navigation-link">Условия использования</a>
+                </li>
+            </ul>
+        </nav>
+        <p class="footer__copyright">© 2001–2017  ООО «Яндекс»</p>
+    </footer>
+</div>
+
+</body>
+</html>

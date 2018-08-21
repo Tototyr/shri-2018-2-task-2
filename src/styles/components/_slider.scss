@@ -1,0 +1,83 @@
+@import "../theme/colors";
+
+// Mixins
+@import "../mixins/slider/slider-track";
+@import "../mixins/slider/slider-thumb";
+@import "../mixins/slider/slider-start-value";
+@import "../mixins/slider/slider-end-value";
+
+$light-track-bcg: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
+$temperature-track-bcg: linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%);
+
+.range-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+    position: relative;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 .125em .125em map_get($colors, light-color);
+        background-color: rgba(map_get($colors, light-color), .32);
+    }
+
+    &--light {
+        @include slider-track($light-track-bcg);
+        @include slider-thumb();
+        @include slider-start-value('', 'icon_sun_max');
+        @include slider-end-value('', 'icon_sun_min');
+    }
+
+    &--temperature {
+        @include slider-track($temperature-track-bcg);
+        @include slider-thumb();
+        @include slider-start-value('-10');
+        @include slider-end-value('+30');
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .range-slider {
+        //    width: 60px;
+        //    height: 100%;
+        //
+        //    // Как вариант
+        transform: rotateZ(270deg);
+    }
+    //
+    //    &:before {
+    //        content: "+30";
+    //
+    //        font-family: ArialMT, sans-serif;
+    //        font-size: 18px;
+    //        font-weight: bold;
+    //
+    //        position: absolute;
+    //        left: 50%;
+    //        top: 16px;
+    //
+    //        transform: translateX(-50%);
+    //        color: map_get($colors, light-color);
+    //    }
+    //
+    //    &:after {
+    //        content: "-10";
+    //
+    //        font-family: ArialMT, sans-serif;
+    //        font-size: 18px;
+    //        font-weight: bold;
+    //
+    //        position: absolute;
+    //        left: 50%;
+    //        bottom: 16px;
+    //        top: auto;
+    //        right: auto;
+    //
+    //        transform: translateX(-50%);
+    //        color: map_get($colors, light-color);
+    //    }
+    //}
+}

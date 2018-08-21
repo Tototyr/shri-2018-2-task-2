@@ -1,0 +1,129 @@
+@import "../theme/colors";
+@import "../mixins/scroll-hide";
+@import "../mixins/background-image";
+@import "../mixins/focus-state";
+
+.dashboard {
+    display: flex;
+    flex-flow: row wrap;
+
+    height: 331px;
+
+    padding: 26px 25px;
+    
+    background: url(../assets/images/bg_dashboard.png) no-repeat center;
+    background-size: cover;
+    
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    &__events {
+        display: flex;
+        flex-flow: column nowrap;
+
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-right: 25px;
+        box-sizing: border-box;
+    }
+
+    &__devices {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    &__user-welcome {
+        font-size: 27px;
+        font-weight: bold;
+
+        margin-top: 0;
+        margin-bottom: 6px;
+        color: map_get($colors, main-text-color);
+    }
+
+    &__home-state {
+        font-size: 14px;
+
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: map_get($colors, main-text-color);
+    }
+
+    &__devices-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+        @include scroll-hide();
+    }
+
+    &__device-item {
+        margin-bottom: 15px;
+        
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__show-more {
+        position: absolute;
+        bottom: 0;
+        
+        width: 200px;
+        height: 41px;
+    
+        cursor: pointer;
+        
+        @include focus-state();
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboard {
+        flex-flow: column;
+        height: auto;
+
+        padding: 21px 20px;
+
+        &__user-welcome {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        &__home-state {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        &__events {
+            max-width: 100%;
+        }
+
+        &__devices {
+            max-width: 100%;
+        }
+
+        &__devices-list {
+            flex-flow: row nowrap;
+            max-width: 100%;
+        }
+        
+        &__device-item {
+            margin-bottom: 0;
+            margin-right: 20px;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__show-more {
+            display: none;
+        }
+    }
+}

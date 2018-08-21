@@ -1,0 +1,10 @@
+@mixin slider-track($background: '') {
+	
+	&::-webkit-slider-runnable-track {
+		-webkit-appearance: none;
+		background-image: $background;
+		border-radius: 30px;
+		height: 60px;
+		width: 100%;
+	}
+}
