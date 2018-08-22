@@ -18,13 +18,10 @@ export const carousel = (options) => {
 			this.currentSlideIndex = 0;
 			this.posX = 0;
 			this.width = 0;
-			
-			
-			// width
+
 			for (let i = 0; i < this.slides.length; i++) {
 				this.width += this.slides[i].offsetWidth;
 			}
-			
 			
 			this._leftArrow = this.arrows.left;
 			this._rightArrow = this.arrows.right;
@@ -32,18 +29,8 @@ export const carousel = (options) => {
 			this._registerEvents();
 		},
 		
-		get currentElement() {
-			if (this.currentSlideIndex <= this.slides.length) {
-				return this.slides[this.currentSlideIndex];
-			}
-		},
-		
 		get currentTick() {
-			const tick = this.carousel.querySelector(this.options.slidesSelector).offsetWidth;
-			console.log(`this.width: ${ this.width }`);
-			console.log(`this.width - this.posX: ${ this.width - this.posX }`);
-			
-			return tick;
+			return this.carousel.querySelector(this.options.slidesSelector).offsetWidth;
 		},
 		
 		get arrows() {
@@ -67,7 +54,6 @@ export const carousel = (options) => {
 		},
 		
 		prev() {
-			// TODO: нужно просчитывать максимальную ширину и прибавлять / отнимать заданую ширину. Крутить если еще есть куда
 			this.currentSlideIndex--;
 			this.posX += this.currentTick;
 			this._animate();

@@ -17,7 +17,6 @@ export default class Modal {
 		this.move();
 		
     document.querySelector('.wrapper').classList.add('overlay');
-    document.querySelector('.range-slider').addEventListener('input', (event) => console.log(document.querySelector('.range-slider').value));
 	}
 	
 	createTemplate() {

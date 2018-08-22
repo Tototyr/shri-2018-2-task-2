@@ -1,9 +1,33 @@
 @import "../theme/colors";
 
+/* Mixin */
+@import "../mixins/background-image";
+
 .dropdown {
 
     &__toggle {
+        font-size: 13px;
+        font-weight: bold;
+    
+        padding: 8px 15px;
+        border-radius: 20px;
+        color: map_get($colors, main-text-color);
+        
         display: none;
+        
+        &:after {
+            content: "";
+    
+            @include background-image('arrow-left');
+            height: 15px;
+            width: 20px;
+            
+            transform: rotate(-90deg);
+            transform-origin: 60%;
+    
+            position: relative;
+            left: 2px;
+        }
     }
 }
 
@@ -12,6 +36,7 @@
         position: relative;
 
         &__toggle {
+            display: flex;
             background: map_get($colors, company);
         }
 
@@ -21,8 +46,10 @@
             &--active {
                 display: flex;
                 flex-flow: column nowrap;
+                
                 position: absolute;
-                top: 20px;
+                top: 40px;
+                z-index: 999;
             }
         }
     }

@@ -31,8 +31,6 @@ export const handler = () => {
 		}
 		
 		if (target.dataset.type && target.dataset.type === 'light') {
-
-			console.log(target);
 			new LightModal(target);
 		}
 		

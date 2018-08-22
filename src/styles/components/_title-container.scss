@@ -15,7 +15,6 @@
         margin-bottom: 0;
         margin-right: 13px;
 
-        // TODO: попробовать проверить наличие сосдених элементов
         white-space: nowrap;
     }
 
@@ -26,5 +25,14 @@
     &__filters {
         display: flex;
         flex-flow: row nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-container {
+        
+        &__filters {
+            margin-left: auto;
+        }
     }
 }

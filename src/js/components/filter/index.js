@@ -1,5 +1,4 @@
 export const filter = (target) => {
-	console.log(target);
 	const _filter = {
 		init() {
 			this.clearAllFilters();
@@ -9,7 +8,6 @@ export const filter = (target) => {
 			this.filterElements = document.querySelector(`.${ this.filterContainer }`).children;
 
 			this.filterList();
-
 		},
 		clearAllFilters() {
 			const filters = document.querySelectorAll('.filters-list__item');
@@ -26,13 +24,9 @@ export const filter = (target) => {
         });
 
         (isActive) ? el.style.display = 'flex' : el.style.display = 'none';
-
       }
 
       target.parentNode.classList.add('filters-list__item--active');
-		},
-		changeRangeValue() {
-
 		}
 	};
 	

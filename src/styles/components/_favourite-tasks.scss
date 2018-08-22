@@ -1,19 +1,19 @@
 @import "../theme/colors";
 
 .favourite-tasks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
-    grid-gap: 15px;
-    padding-bottom: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100px 100px 100px;
+	grid-gap: 15px;
+	padding-bottom: 5px;
 }
 
 @media (max-width: 500px) {
-    .favourite-tasks {
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        grid-auto-flow: column;
-
-        overflow: auto;
-    }
+	.favourite-tasks {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+		grid-auto-flow: column;
+		
+		overflow: auto;
+	}
 }
