@@ -13,28 +13,22 @@ export default class Modal {
 		document.body.classList.add('no-scroll');
 		this.container.innerHTML += this.createTemplate();
 		this.modal = document.querySelector('.modal');
-		this.eventHandler();
 		this.move();
+		this.registerEvents();
 		
-    document.querySelector('.wrapper').classList.add('overlay');
-    document.querySelector('.range-slider').addEventListener('input', (event) => console.log(document.querySelector('.range-slider').value));
+		document.querySelector('.wrapper').classList.add('overlay');
 	}
 	
 	createTemplate() {
 		return `<div class="modal"></div>`;
 	}
-
-	eventHandler() {
-    this.closeAction = document.querySelector('.modal__action--close');
-    this.applyAction = document.querySelector('.modal__action--apply');
-    window.addEventListener('click', (event) => {
-    	if (!event.target.closest('.modal')) {
-    		this.closeModal();
-			}
-    });
-
-    this.closeAction.addEventListener('click', (event) => this.closeModal());
-    this.applyAction.addEventListener('click', (event) => this.applyModal());
+	
+	registerEvents() {
+		this.closeAction = document.querySelector('.modal__action--close');
+		this.applyAction = document.querySelector('.modal__action--apply');
+		
+		this.closeAction.addEventListener('click', (event) => this.closeModal());
+		this.applyAction.addEventListener('click', (event) => this.applyModal());
 	}
 	
 	move() {
@@ -44,8 +38,8 @@ export default class Modal {
 		this.modal.style.top = `${ y }px`;
 		this.modal.style.left = `${ x }px`;
 	}
-
-  applyModal() {
+	
+	applyModal() {
 		// to do something
 		this.closeModal();
 	}

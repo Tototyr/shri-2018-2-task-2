@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <circle id="path-1" cx="111" cy="111" r="89"></circle>
-        <filter x="-3.9%" y="-2.8%" width="107.9%" height="107.9%" filterUnits="objectBoundingBox" id="filter-2">
+        <filter x="-3.9%" y="-2.8%" width="107.9%" height="107.9%" filterUnits="objectBoundingBox" id="index-2">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0.524208121   0 0 0 0 0.475951723   0 0 0 0 0.279116418  0 0 0 0.446388134 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
@@ -19,7 +19,7 @@
                         <g id="round" transform="translate(57.000000, 163.000000)">
                             <g id="Screen">
                                 <g id="background">
-                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use fill="black" fill-opacity="1" filter="url(#index-2)" xlink:href="#path-1"></use>
                                     <use fill="#FEFEFE" fill-rule="evenodd" xlink:href="#path-1"></use>
                                 </g>
                             </g>

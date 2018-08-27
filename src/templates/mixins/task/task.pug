@@ -1,0 +1,8 @@
+include ./_task-icon
+
+mixin task(task)
+	.task
+		+task-icon(task)
+		p.task__name= task.title
+		if (task.state)
+			p.task__state= task.state

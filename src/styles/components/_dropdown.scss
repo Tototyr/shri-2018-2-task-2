@@ -1,9 +1,28 @@
 @import "../theme/colors";
+@import "../mixins/arrow";
+@import "../mixins/focus-state";
+@import "../mixins/dropdown-filters";
 
 .dropdown {
 
     &__toggle {
+        font-size: 13px;
+        font-weight: bold;
+
+        color: map_get($colors, dark);
+
         display: none;
+        cursor: pointer;
+
+        @include arrow();
+
+        &--open {
+            @include arrow(true);
+        }
+    }
+
+    &__content {
+        width: 100%;
     }
 }
 
@@ -12,17 +31,22 @@
         position: relative;
 
         &__toggle {
+            display: block;
+
+            padding: 8px 16px;
             background: map_get($colors, company);
+            border-radius: 20px;
         }
 
         &__content {
             display: none;
+            @include dropdown-filters();
 
             &--active {
                 display: flex;
                 flex-flow: column nowrap;
                 position: absolute;
-                top: 20px;
+                top: 30px;
             }
         }
     }

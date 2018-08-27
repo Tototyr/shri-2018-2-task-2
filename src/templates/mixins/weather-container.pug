@@ -1,0 +1,6 @@
+mixin weather-container(data)
+	span.weather-list__label= data.title
+	.weather-list__degrees-container
+		p.weather-list__degrees= data.degrees
+		if (data.hasRain)
+			img(src="../assets/images/cloud-drizzle@1x.png" srcset="../assets/images/cloud-drizzle@2x.png").weather-list__icon

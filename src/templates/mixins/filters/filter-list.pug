@@ -1,0 +1,7 @@
+include filter
+
+mixin filter-list(filters)
+	ul.filters-list.dropdown__content
+		each index in filters
+			li.filters-list__item
+				+filter(index)

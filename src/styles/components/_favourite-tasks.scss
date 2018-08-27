@@ -1,19 +1,32 @@
 @import "../theme/colors";
+@import "../mixins/scroll-hide";
 
 .favourite-tasks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
-    grid-gap: 15px;
-    padding-bottom: 5px;
+    
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 15px;
+        padding-bottom: 5px;
+        
+        @include scroll-hide();
+    }
+
+    &__item {
+        padding: 2px;
+    }
 }
 
 @media (max-width: 500px) {
     .favourite-tasks {
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        grid-auto-flow: column;
-
-        overflow: auto;
+        
+        &__list {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            grid-auto-flow: column;
+    
+            overflow: auto;
+        }
     }
 }

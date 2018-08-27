@@ -1,0 +1,21 @@
+@import "./background-image";
+
+@mixin arrow($isRotate: false) {
+
+  &:after {
+    content: "";
+
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+
+    transform: rotate(-90deg);
+    transform-origin: 10px;
+
+    @include background-image('arrow-left', 10px 10px);
+
+    @if ($isRotate) {
+      transform: rotate(90deg);
+    }
+  }
+}

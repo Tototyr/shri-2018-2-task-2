@@ -1,0 +1,16 @@
+@import "../theme/colors";
+
+@mixin dropdown-filters() {
+  .filters-list {
+
+    &__item {
+      background: #FFF;
+      margin: 0;
+    }
+
+    &__filter {
+      width: 100%;
+      border: 1px solid map_get($colors, company-color);
+    }
+  }
+}

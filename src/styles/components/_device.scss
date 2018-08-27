@@ -1,25 +1,35 @@
 @import "../theme/colors";
 @import "../mixins/scroll-hide";
+@import "../mixins/background-image";
 
 .device {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     
-    min-height: 120px;
-    max-height: 120px;
-    min-width: 200px;
-    max-width: 200px;
+    height: 120px;
+    width: 200px;
     
     padding: 14px;
     border-radius: 20px;
     background: map_get($colors, dim-color);
+
+    cursor: pointer;
     box-sizing: border-box;
     
     &__icon {
         height: 24px;
         width: 24px;
         
-        &--disable {
+        &--light {
+            @include background-image("icon_sun_2");
+        }
+        
+        &--warm {
+            @include background-image("icon_temperature_2");
+        }
+        
+        &--disabled {
             filter: grayscale(100%);
         }
     }
@@ -43,8 +53,4 @@
     &__desc {
         margin-top: auto;
     }
-}
-
-@media (max-width: 500px) {
-
 }

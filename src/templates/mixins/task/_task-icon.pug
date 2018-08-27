@@ -1,0 +1,8 @@
+mixin task-icon(task)
+	case task.type
+		when 'warm'
+			.task__icon.task__icon--warm
+		when 'light'
+			.task__icon.task__icon--light
+		when 'action'
+			.task__icon.task__icon--action

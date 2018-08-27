@@ -1,0 +1,8 @@
+include ./_device-icon
+
+mixin device-card(device)
+	.device(data-filter="all " + device.area data-modal= device.type)
+		+device-icon(device)
+		.divce__desc
+			p.device__name= device.name
+			p.device__state= device.state

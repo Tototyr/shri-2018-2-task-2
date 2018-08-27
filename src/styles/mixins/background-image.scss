@@ -3,7 +3,7 @@ $fallback-extension: 'png' !default;
 $default-suffix: '@1x';
 $retina-suffix: '@2x';
 
-@mixin background-image($name, $size:false, $repeat: 'no-repeat', $position: 'center'){
+@mixin background-image($name, $size: false, $repeat: 'no-repeat', $position: 'center'){
     background-image: url(#{$image-path}/#{$name}#{$default-suffix}.#{$fallback-extension});
     background-image: url(#{$image-path}/#{$name}.svg);
     background-repeat: no-repeat;

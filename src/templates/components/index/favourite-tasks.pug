@@ -1,0 +1,10 @@
+// Mixins
+include ../../mixins/title-container/title-container
+include ../../mixins/task/task
+
++title-container('Избранные сценарии', true)
+.favourite-tasks
+	ul.favourite-tasks__list
+		each task in tasks
+			li.favourite-tasks__item
+				+task(task)

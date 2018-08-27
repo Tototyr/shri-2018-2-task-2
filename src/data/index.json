@@ -1,0 +1,228 @@
+{
+  "navigation": [
+    {
+      "title": "Главная",
+      "url": "#"
+    },
+    {
+      "title": "Устройства",
+      "url": "#"
+    },
+    {
+      "title": "Сценарии",
+      "url": "#"
+    }
+  ],
+  "dashboard": {
+    "username": "Геннадий",
+    "state": "Двери и окна закрыты, сигнализация включена.",
+    "temperature": [
+      {
+        "title": "Дома",
+        "degrees": "+23",
+        "hasRain": false
+      },
+      {
+        "title": "За окном",
+        "degrees": "+19",
+        "hasRain": true
+      }
+    ],
+    "devices": [
+      {
+        "id": 1,
+        "type": "light",
+        "name": "Xiaomi Yeelight LED Smart Bulb",
+        "state": "Включено",
+        "area": "hall",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "type": "warm",
+        "name": "D-Link Omna 180 Cam",
+        "state": "Включится в 17:00",
+        "area": "cameras",
+        "isActive": false
+      },
+      {
+        "id": 3,
+        "type": "light",
+        "name": "Elgato Eve Degree Connected",
+        "state": "Включено",
+        "area": "light",
+        "isActive": true
+      },
+      {
+        "id": 4,
+        "type": "warm",
+        "name": "LIFX Mini Day & Dusk A60 E27",
+        "state": "Включится в 17:00",
+        "area": "light",
+        "isActive": false
+      },
+      {
+        "id": 5,
+        "type": "warm",
+        "name": "Xiaomi Mi Air Purifier 2S",
+        "state": "Включится в 17:00",
+        "area": "bulbs",
+        "isActive": false
+      },
+      {
+        "id": 6,
+        "type": "light",
+        "name": "Philips Zhirui",
+        "state": "Включено",
+        "area": "kitchen",
+        "isActive": true
+      },
+      {
+        "id": 7,
+        "type": "warm",
+        "name": "LIFX Mini Day & Dusk A60 E27",
+        "state": "Включится в 17:00",
+        "area": "bulbs",
+        "isActive": false
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Выключить весь свет в доме и во дворе",
+      "type": "warm",
+      "state": ""
+    },
+    {
+      "id": 2,
+      "title": "Я ухожу",
+      "type": "action",
+      "state": ""
+    },
+    {
+      "id": 3,
+      "title": "Набрать горячую ванну",
+      "type": "light",
+      "state": "Начнётся в 18:00"
+    },
+    {
+      "id": 4,
+      "title": "Сделать пол тёплым во всей квартире",
+      "type": "warm",
+      "state": ""
+    },
+    {
+      "id": 5,
+      "title": "Набрать горячую ванну",
+      "type": "warm",
+      "state": ""
+    }
+  ],
+  "favouriteDevices": [
+    {
+      "id": 1,
+      "type": "light",
+      "name": "Xiaomi Yeelight LED Smart Bulb",
+      "state": "Включено",
+      "area": "hall",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "type": "warm",
+      "name": "D-Link Omna 180 Cam",
+      "state": "Включится в 17:00",
+      "area": "cameras",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "type": "light",
+      "name": "Elgato Eve Degree Connected",
+      "state": "Включено",
+      "area": "light",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "type": "warm",
+      "name": "LIFX Mini Day & Dusk A60 E27",
+      "state": "Включится в 17:00",
+      "area": "light",
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "type": "warm",
+      "name": "Xiaomi Mi Air Purifier 2S",
+      "state": "Включится в 17:00",
+      "area": "bulbs",
+      "isActive": false
+    },
+    {
+      "id": 6,
+      "type": "light",
+      "name": "Philips Zhirui",
+      "state": "Включено",
+      "area": "kitchen",
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "type": "warm",
+      "name": "LIFX Mini Day & Dusk A60 E27",
+      "state": "Включится в 17:00",
+      "area": "bulbs",
+      "isActive": false
+    },
+    {
+      "id": 8,
+      "type": "warm",
+      "name": "Xiaomi Mi Air Purifier 2S",
+      "state": "Включится в 17:00",
+      "area": "cameras",
+      "isActive": false
+    },
+    {
+      "id": 9,
+      "type": "light",
+      "name": "Philips Zhirui",
+      "state": "Включено",
+      "area": "hall",
+      "isActive": true
+    }
+  ],
+  "deviceFilters": [
+    {
+      "id": 1,
+      "rel": "all",
+      "area": "favourite-devices",
+      "name": "Все"
+    },
+    {
+      "id": 2,
+      "rel": "kitchen",
+      "area": "favourite-devices",
+      "name": "Кухня"
+    },
+    {
+      "id": 3,
+      "rel": "hall",
+      "area": "favourite-devices",
+      "name": "Зал"
+    },
+    {
+      "id": 4,
+      "rel": "light",
+      "area": "favourite-devices",
+      "name": "Лампочки"
+    },
+    {
+      "id": 5,
+      "rel": "cameras",
+      "area": "favourite-devices",
+      "name": "Камеры"
+    }
+  ]
+}

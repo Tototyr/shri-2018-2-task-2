@@ -1,4 +1,6 @@
 import "./styles/index.scss";
-import {handler} from "./js";
-
-handler();
+import "./js/scrolling/index";
+import "./js/menu/index";
+import "./js/filters/index";
+import "./js/modals/index";
+import "./js/dropdown/index";

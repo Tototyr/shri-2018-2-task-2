@@ -1,0 +1,18 @@
+// Mixins
+include ../../mixins/title-container/title-container
+include ../../mixins/device/device-card
+include ../../mixins/filters/filter-list
+
+//+title-container('Избранные устройства', true)
+.title-container
+		h2.title-container__title Избранные устройства
+		.title-container__filters
+			.dropdown
+				button.btn.btn--company.dropdown__toggle Все
+				+filter-list(deviceFilters)
+
+.favourite-devices
+	ul.favourite-devices__list
+		each device in favouriteDevices
+			li.favourite-devices__item
+				+device-card(device)

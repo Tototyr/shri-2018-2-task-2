@@ -1,15 +1,16 @@
 import Modal from "./modal";
 
-export default class LightModal extends Modal {
+export default class WarmModal extends Modal {
 	constructor(target) {
 		super(target);
+		this.target = target;
 	}
-
+	
 	createTemplate() {
-    const deviceName  = this.target.querySelector('.device__name').textContent;
-    const deviceState  = this.target.querySelector('.device__state').textContent;
-
-    return `
+		const deviceName  = this.target.querySelector('.device__name').textContent;
+		const deviceState  = this.target.querySelector('.device__state').textContent;
+		
+		return `
       <div class="modal">
 				<div class="modal__wrapper">
 					<div class="modal__body">
@@ -18,7 +19,6 @@ export default class LightModal extends Modal {
 								<p class="modal__title">${ deviceName }</p>
 								<p class="modal__degrees">
 									<span class="modal__degrees-count">+23</span>
-									<!--<img src=<%=require("./assets/images/icon_temperature@1x.png")%>-->
 								</p>
 							</div>
 							<p class="modal__device-state">${ deviceState }</p>
@@ -30,17 +30,20 @@ export default class LightModal extends Modal {
 											<button class="filters-list__filter" data-rel="0" data-filter-cont="range-slider">Вручную</button>
 									</li>
 									<li class="filters-list__item filters-list__item--active">
-											<button class="filters-list__filter" data-rel="-10" data-filter-cont="range-slider">Дневной свет</button>
+											<button class="filters-list__filter" data-rel="-10" data-filter-cont="range-slider">Холодно</button>
 									</li>
 									<li class="filters-list__item">
-											<button class="filters-list__filter" data-rel="20" data-filter-cont="range-slider">Вечерний свет</button>
+											<button class="filters-list__filter" data-rel="20" data-filter-cont="range-slider">Тепло</button>
 									</li>
 									<li class="filters-list__item">
-											<button class="filters-list__filter" data-rel="25" data-filter-cont="range-slider">Рассвет</button>
+											<button class="filters-list__filter" data-rel="25" data-filter-cont="range-slider">Кофмортно</button>
+									</li>
+									<li class="filters-list__item">
+											<button class="filters-list__filter" data-rel="30" data-filter-cont="range-slider">Жарко</button>
 									</li>
 								</ul>
 							</div>
-							<input type="range" class="modal__range range-slider range-slider--light" orient="vertical" name="volume" min="-10" max="30" />
+							<input type="range" class="modal__range range-slider range-slider--temperature" orient="vertical" name="volume" min="-10" max="30" />
 						</div>
 					</div>
 					<div class="modal__footer">
@@ -50,5 +53,5 @@ export default class LightModal extends Modal {
 				</div>
 			</div>
     `;
-  }
+	}
 }

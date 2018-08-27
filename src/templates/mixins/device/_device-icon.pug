@@ -1,0 +1,11 @@
+mixin device-icon(device)
+	if (device.isActive)
+		if (device.type == 'warm')
+			.device__icon.device__icon--warm
+		else
+			.device__icon.device__icon--light
+	else
+		if (device.type == 'warm')
+			.device__icon.device__icon--warm.device__icon--disabled
+		else
+			.device__icon.device__icon--light.device__icon--disabled

@@ -1,0 +1,22 @@
+// Mixins
+include ../../mixins/title-container/title-container
+include ../../mixins/weather-container
+include ../../mixins/device/device-card
+
++title-container('Главное')
+.dashboard
+	.dashboard__events
+		p.dashboard__greeting Привет, #{dashboard.username}!
+		p.dashboard__home-state= dashboard.state
+
+		.dashboard__weather-container
+			ul.weather-list
+				each weather in dashboard.temperature
+					li.weather-list__item
+						+weather-container(weather)
+	.dashboard__devices
+		ul.dashboard__devices-list.scroll
+			each device in dashboard.devices
+				li.dashboard__device-item
+					+device-card(device)
+

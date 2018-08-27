@@ -1,17 +1,26 @@
-const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// Data
+const data = require("./src/data/index.json");
+
+// Dependencies
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const PATH = {
+  source: path.join(__dirname, "src"),
+  production: path.join(__dirname, "dist")
+};
 
 module.exports = {
-  entry: './src/app.js',
+  entry: "./src/app.js",
   output: {
-    path: path.resolve(__dirname, '/dist'),
-    filename: 'bundle.js'
+    path: PATH.production,
+    filename: "[name].js"
   },
   devServer: {
     open: true,
-    contentBase: "./dist",
     compress: true,
+    hot: true,
+    inline: true,
     port: 9000
   },
   module: {
@@ -22,19 +31,46 @@ module.exports = {
           "style-loader",
           "css-loader",
           "sass-loader",
-	        "postcss-loader"
+          "postcss-loader"
         ]
       },
       {
         test: /\.(png|jpg|svg|jpeg)$/,
-        loader: 'url-loader'
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000
+            }
+          },
+          {
+            loader: "img-loader"
+          }
+        ]
+      },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: "html-loader",
+            query: {
+              attrs: "img:src img:srcset"
+            }
+          },
+          {
+            loader: "pug-html-loader",
+            options: {
+              pretty: true,
+              data: data
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
+      template: PATH.source + "/templates/index.pug"
     })
   ]
 };

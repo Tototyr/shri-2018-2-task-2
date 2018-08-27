@@ -1,5 +1,5 @@
 @mixin scroll-hide() {
-    overflow: auto;
+    overflow-y: auto;
     max-height: 100%;
     
     -ms-overflow-style: none;
