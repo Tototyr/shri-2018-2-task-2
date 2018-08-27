@@ -105,32 +105,6 @@
     }
 }
 
-@-webkit-keyframes open {
-    0% {
-        transform: translateX(-50%) translateY(-50%) scale(0);
-        opacity: 0;
-    }
-    100% {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%) scale(1);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes close {
-    0% {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%) translateY(-50%) scale(0);
-        opacity: 0;
-    }
-}
-
 @media (max-width: 500px) {
     .modal {
         height: 100%;

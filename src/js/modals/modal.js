@@ -46,7 +46,7 @@ export default class Modal {
 	
 	closeModal() {
 		this.modal.classList.add('modal--fade');
-
+		
 		setTimeout(() => {
 			this.container.removeChild(this.modal);
 			document.body.classList.remove('no-scroll');

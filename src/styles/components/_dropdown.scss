@@ -5,49 +5,49 @@
 
 .dropdown {
 
-    &__toggle {
-        font-size: 13px;
-        font-weight: bold;
+  &__toggle {
+    font-size: 13px;
+    font-weight: bold;
 
-        color: map_get($colors, dark);
+    color: map_get($colors, dark);
 
-        display: none;
-        cursor: pointer;
+    display: none;
+    cursor: pointer;
 
-        @include arrow();
+    @include arrow();
 
-        &--open {
-            @include arrow(true);
-        }
+    &--open {
+      @include arrow(true);
     }
+  }
 
-    &__content {
-        width: 100%;
-    }
+  &__content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
-    .dropdown {
-        position: relative;
+  .dropdown {
+    position: relative;
 
-        &__toggle {
-            display: block;
+    &__toggle {
+      display: block;
 
-            padding: 8px 16px;
-            background: map_get($colors, company);
-            border-radius: 20px;
-        }
-
-        &__content {
-            display: none;
-            @include dropdown-filters();
-
-            &--active {
-                display: flex;
-                flex-flow: column nowrap;
-                position: absolute;
-                top: 30px;
-            }
-        }
+      padding: 8px 16px;
+      background: map_get($colors, company);
+      border-radius: 20px;
     }
+
+    &__content {
+      display: none;
+      @include dropdown-filters();
+
+      &--active {
+        display: flex;
+        flex-flow: column nowrap;
+        position: absolute;
+        top: 30px;
+      }
+    }
+  }
 }
