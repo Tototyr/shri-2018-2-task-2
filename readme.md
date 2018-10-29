@@ -1,6 +1,6 @@
-1. `npm instsall`
-2. Для запуска проекта `npm run start`.
-3. Для сборки production версии `npm run build`
+
+1. Для запуска проекта `npm run start`.
+2. Для сборки production версии `npm run build`
 
 Исходные файлы лежат в `./dist/`.
 
